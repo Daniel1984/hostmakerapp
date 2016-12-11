@@ -1,0 +1,74 @@
+.properties {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('../../../assets/hero_unit.jpg');
+    background-position: 50% 0%;
+    background-size: cover;
+    overflow: scroll;
+}
+
+.properties_table {
+    width: 60%;
+    margin: 100px auto 0 auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.properties_table-header {
+    th {
+        padding: 20px 10px;
+        background-color: #000;
+        color: whitesmoke;
+        text-align: left;
+
+        &:first-child {
+            border-top-left-radius: 6px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 6px;
+        }
+    }
+}
+
+.properties_table-body {
+    tr {
+        background-color: whitesmoke;
+        border-bottom: 1px solid #ddd;
+
+        &:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+    }
+
+    td {
+        vertical-align: top;
+        padding: 10px;
+
+        &:first-child {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.properties_loading {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+    padding: 10px 40px;
+    background-color: #000;
+}
+
+@media (max-width:500px) {
+    .properties_table {
+        width: 90%;
+    }
+}

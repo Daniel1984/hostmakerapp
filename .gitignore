@@ -1,0 +1,15 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# misc
+*.swp
+*.swo
+.DS_Store
+.env
+.editorconfig
+.firebaserc
+database.rules.json
+firebase.json
+npm-debug.log

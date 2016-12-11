@@ -1,0 +1,16 @@
+.header {
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .3);
+    background-color: #fff;
+    height: 56px;
+    padding: 0 40px;
+}
+
+.header_logo {
+    height: 56px;
+    width: 175px;
+    background-image: url('../../../../assets/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
