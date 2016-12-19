@@ -21,7 +21,7 @@ module.exports = {
   },
 
   sassConfig: [
-    autoprefixer({ add: true, browsers: [] })
+    autoprefixer({ add: true, browsers: ['last 3 versions'] })
   ],
 
   plugins: [

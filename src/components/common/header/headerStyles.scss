@@ -1,7 +1,12 @@
 .header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .3);
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     height: 56px;
     padding: 0 40px;
 }
@@ -14,3 +19,27 @@
     background-repeat: no-repeat;
 }
 
+.header_links {
+    display: flex;
+    > a {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100px;
+        text-decoration: none;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+
+        &[aria-selected=true] {
+            pointer-events: none;
+            cursor: default;
+            background-color: rgb(231, 231, 231);
+            color: rgb(102, 102, 102);
+        }
+
+        &:hover {
+            background-color: rgb(241, 241, 241);
+        }
+    }
+}

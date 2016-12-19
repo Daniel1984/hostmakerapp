@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: __dirname + "/src/main.js",
@@ -13,7 +14,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
       { test: /\.js$/, exclude: /node_modules/, loader: 'webpack-replace', query: { replace: [{ from: '<% API_HOST %>', to: 'https://shrouded-taiga-55894.herokuapp.com' }]}},
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass') },
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', ['css', 'postcss', 'sass']) },
       { test: /\.(jpg|png|svg)$/, loader: 'file?name=[path][name].[hash].[ext]' }
     ]
   },
@@ -25,9 +26,9 @@ module.exports = {
     }
   },
 
-  sass: [
-    require('autoprefixer')
-  ],
+  postcss: function() {
+      return [autoprefixer({ add: true, browsers: ['last 3 versions'] })];
+  },
 
   plugins: [
     new HtmlWebpackPlugin({ template: __dirname + "/src/index.tmpl.html" }),

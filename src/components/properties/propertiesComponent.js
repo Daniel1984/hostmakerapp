@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getProperties } from './propertiesApi';
+import Loading from '../common/loading/loadingComponent';
 import './propertiesStyles.scss';
 
 class AboutComponent extends Component {
@@ -8,8 +9,7 @@ class AboutComponent extends Component {
 
         this.state = {
             properties: [],
-            loading: true,
-            hasError: false
+            loading: true
         };
 
         this.getPropertiesRowElement = this.getPropertiesRowElement.bind(this);
@@ -19,7 +19,7 @@ class AboutComponent extends Component {
     componentDidMount() {
         getProperties()
             .then(properties => this.setState({ properties, loading: false }))
-            .catch(err => this.setState({ hasError: true, loading: false }));
+            .catch(err => this.setState({ loading: false }));
     }
 
     getPropertyAddress(address) {
@@ -42,7 +42,7 @@ class AboutComponent extends Component {
         return (
             <div className="properties">
                 {this.state.loading ?
-                    <h1 className="properties_loading">Loading...</h1> :
+                    <Loading message="Loading..." /> :
                     <table className="properties_table">
                         <thead className="properties_table-header">
                             <tr>

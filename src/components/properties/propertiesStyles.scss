@@ -54,19 +54,6 @@
     }
 }
 
-.properties_loading {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 60px;
-    font-weight: 600;
-    padding: 10px 40px;
-    background-color: #000;
-}
-
 @media (max-width:500px) {
     .properties_table {
         width: 90%;

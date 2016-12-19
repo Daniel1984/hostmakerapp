@@ -1,0 +1,39 @@
+.properties-routes {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 56px;
+    bottom: 0;
+}
+
+.properties-routes_dashboard {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 200px;
+    overflow: scroll;
+}
+
+.properties-routes_map {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.properties-routes_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    > li {
+        padding: 15px 10px;
+        border-bottom: 1px solid rgb(220, 220, 220);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(235, 235, 235);
+        }
+    }
+}
