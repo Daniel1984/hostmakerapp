@@ -67,7 +67,7 @@ class PropertiesRoute extends Component {
                         <aside className="properties-routes_dashboard">
                             <ul className="properties-routes_list">
                                 {this.state.markers.map((marker, index) => (
-                                    <li key={index} onClick={() => this.changeFucusLocation(marker)}>{marker.address}</li>
+                                    <li aria-selected={marker.showInfo} key={index} onClick={() => this.changeFucusLocation(marker)}>{marker.address}</li>
                                 ))}
                             </ul>
                         </aside>

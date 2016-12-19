@@ -35,5 +35,11 @@
         &:hover {
             background-color: rgb(235, 235, 235);
         }
+
+        &[aria-selected=true] {
+            background-color: rgb(220, 220, 220);
+            cursor: default;
+            pointer-events: none;
+        }
     }
 }
