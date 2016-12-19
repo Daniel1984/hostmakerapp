@@ -13,7 +13,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'webpack-replace', query: { replace: [{ from: '<% API_HOST %>', to: 'https://shrouded-taiga-55894.herokuapp.com' }]}},
+      { test: /\.js$/, exclude: /node_modules/, loader: 'webpack-replace', query: { replace: [{ from: '<% API_HOST %>', to: 'https://hostmaker.herokuapp.com/' }]}},
       { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', ['css', 'postcss', 'sass']) },
       { test: /\.(jpg|png|svg)$/, loader: 'file?name=[path][name].[hash].[ext]' }
     ]
